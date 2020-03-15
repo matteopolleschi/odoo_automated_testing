@@ -20,6 +20,7 @@
     'depends': ['base', 'account'],
     'data': [
         #'security/ir.model.access.csv',
+        'views/odoo_automated_testing_view.xml',
     ],
     'demo': [
     ],
