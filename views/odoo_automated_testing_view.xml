@@ -1,74 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <data>
-	    
-		<record model="ir.actions.act_window" id="odoo_automated_testing_action">
-            <field name="name">odoo_automated_testing</field>
-            <field name="res_model">odoo_automated_testing.odoo_automated_testing</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-        </record>
 
-        <!-- odoo automated testing form view -->
-        <record model="ir.ui.view" id="odoo_automated_testing_form_view">
-            <field name="name">odoo_automated_testing.form</field>
-            <field name="model">odoo_automated_testing.odoo_automated_testing</field>
-            <field name="arch" type="xml">
-                <form string="Odoo Automated Testing Form">
-                    <sheet>
-                        <group string="Modules">
-                            <field name="name"/>
-                            <field name="result"/>
-                        </group>
-                        <group string="Tests">
-                            <field name="test01"/>
-                            <field name="test02"/>
-                            <field name="test03"/>
-                            <field name="test04"/>
-                            <field name="test05"/>
-                            <field name="test06"/>
-                            <field name="test07"/>
-                            <field name="test08"/>
-                        </group>
-                    </sheet>
-                </form>
-            </field>
-        </record>
+	<record model="ir.actions.act_window" id="odoo_automated_testing_action">
+        <field name="name">odoo_automated_testing</field>
+        <field name="res_model">odoo_automated_testing.odoo_automated_testing</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 
-         <!-- odoo automated testing search view -->
-        <record model="ir.ui.view" id="odoo_automated_testing_search_view">
-            <field name="name">odoo_automated_testing.search</field>
-            <field name="model">odoo_automated_testing.odoo_automated_testing</field>
-            <field name="arch" type="xml">
-                <search>
-                    <field name="name"/>
-                    <field name="result"/>
-                </search>
-            </field>
-        </record>
+    <!-- odoo automated testing form view -->
+    <record model="ir.ui.view" id="odoo_automated_testing_form_view">
+        <field name="name">odoo_automated_testing.form</field>
+        <field name="model">odoo_automated_testing.odoo_automated_testing</field>
+        <field name="arch" type="xml">
+            <form string="Odoo Automated Testing Form">
+                <sheet>
+                    <group string="Modules">
+                        <field name="name"/>
+                        <field name="result"/>
+                    </group>
+                    <group string="Tests">
+                        <field name="test01"/>
+                        <field name="test02"/>
+                        <field name="test03"/>
+                        <field name="test04"/>
+                        <field name="test05"/>
+                        <field name="test06"/>
+                        <field name="test07"/>
+                        <field name="test08"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
-        <menuitem id="main_odoo_automated_testing_menu" name="Odoo Automated Testing"/>
-        <menuitem id="odoo_automated_testing_menu" name="Odoo Automated Testing" parent="main_odoo_automated_testing_menu"/>
-        <menuitem id="menu_detail_logging" action="odoo_automated_testing_action" parent="odoo_automated_testing_menu" sequence="2"/>
+    <!-- odoo automated testing search view -->
+    <record model="ir.ui.view" id="odoo_automated_testing_search_view">
+        <field name="name">odoo_automated_testing.search</field>
+        <field name="model">odoo_automated_testing.odoo_automated_testing</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="result"/>
+            </search>
+        </field>
+    </record>
 
-        <!-- override the automatically generated list view for odoo automated testing -->
-        <record model="ir.ui.view" id="odoo_automated_testing_tree_view">
-            <field name="name">odoo_automated_testing.tree</field>
-            <field name="model">odoo_automated_testing.odoo_automated_testing</field>
-            <field name="arch" type="xml">
-                <tree string="Odoo Automated Testing Tree">
-                    <field name="name"/>
-                    <field name="result"/>
-                    <field name="test01"/>
-                    <field name="test02"/>
-                    <field name="test03"/>
-                    <field name="test04"/>
-                    <field name="test05"/>
-                    <field name="test06"/>
-                    <field name="test07"/>
-                    <field name="test08"/>
-                </tree>
-            </field>
-        </record>
+    <!-- override the automatically generated list view for odoo automated testing -->
+    <record model="ir.ui.view" id="odoo_automated_testing_tree_view">
+        <field name="name">odoo_automated_testing.tree</field>
+        <field name="model">odoo_automated_testing.odoo_automated_testing</field>
+        <field name="arch" type="xml">
+            <tree string="Odoo Automated Testing Tree">
+                <field name="name"/>
+                <field name="result"/>
+                <field name="test01"/>
+                <field name="test02"/>
+                <field name="test03"/>
+                <field name="test04"/>
+                <field name="test05"/>
+                <field name="test06"/>
+                <field name="test07"/>
+                <field name="test08"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="main_odoo_automated_testing_menu" name="Odoo Automated Testing"/>
+    <menuitem id="odoo_automated_testing_menu" name="Odoo Automated Testing" parent="main_odoo_automated_testing_menu"/>
+
+    <menuitem id="menu_detail_logging" action="odoo_automated_testing_action" parent="odoo_automated_testing_menu" sequence="2"/>
     
-    </data>
 </odoo>
