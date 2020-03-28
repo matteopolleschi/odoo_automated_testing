@@ -2,8 +2,9 @@
 
 from odoo import models, fields, api
 
-class odoo_automated_testing(models.Model):
+class Odoo_automated_testing(models.Model):
     _name = 'odoo_automated_testing.odoo_automated_testing'
+    _description = "Odoo automated testing"
 
     name = fields.Char(string='Test Module')
     result = fields.Char(string='Test result')

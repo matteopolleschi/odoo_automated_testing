@@ -2,7 +2,7 @@
 <odoo>
 
 	<record model="ir.actions.act_window" id="odoo_automated_testing_action">
-        <field name="name">odoo_automated_testing</field>
+        <field name="name">Odoo_automated_testing</field>
         <field name="res_model">odoo_automated_testing.odoo_automated_testing</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
@@ -10,7 +10,7 @@
 
     <!-- odoo automated testing form view -->
     <record model="ir.ui.view" id="odoo_automated_testing_form_view">
-        <field name="name">odoo_automated_testing.form</field>
+        <field name="name">Odoo_automated_testing.form</field>
         <field name="model">odoo_automated_testing.odoo_automated_testing</field>
         <field name="arch" type="xml">
             <form string="Odoo Automated Testing Form">
@@ -36,7 +36,7 @@
 
     <!-- odoo automated testing search view -->
     <record model="ir.ui.view" id="odoo_automated_testing_search_view">
-        <field name="name">odoo_automated_testing.search</field>
+        <field name="name">Odoo_automated_testing.search</field>
         <field name="model">odoo_automated_testing.odoo_automated_testing</field>
         <field name="arch" type="xml">
             <search>
@@ -48,7 +48,7 @@
 
     <!-- override the automatically generated list view for odoo automated testing -->
     <record model="ir.ui.view" id="odoo_automated_testing_tree_view">
-        <field name="name">odoo_automated_testing.tree</field>
+        <field name="name">Odoo_automated_testing.tree</field>
         <field name="model">odoo_automated_testing.odoo_automated_testing</field>
         <field name="arch" type="xml">
             <tree string="Odoo Automated Testing Tree">
@@ -68,7 +68,6 @@
 
     <menuitem id="main_odoo_automated_testing_menu" name="Odoo Automated Testing"/>
     <menuitem id="odoo_automated_testing_menu" name="Odoo Automated Testing" parent="main_odoo_automated_testing_menu"/>
-
-    <menuitem id="menu_detail_logging" action="odoo_automated_testing_action" parent="odoo_automated_testing_menu" sequence="2"/>
+    <menuitem id="automated_testing_menu" name="Automated Testing" parent="odoo_automated_testing_menu" action="odoo_automated_testing_action"/>
     
 </odoo>
