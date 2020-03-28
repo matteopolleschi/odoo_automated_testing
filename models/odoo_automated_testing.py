@@ -6,7 +6,7 @@ class odoo_automated_testing(models.Model):
     _name = 'odoo_automated_testing.odoo_automated_testing'
 
     name = fields.Char(string='Test Module')
-    result = fields.text(string='Test result')
+    result = fields.char(string='Test result')
     test01 = fields.Char(string='Test 1')
     test02 = fields.Char(string='Test 2')
     test03 = fields.Char(string='Test 3')
