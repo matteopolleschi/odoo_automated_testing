@@ -1,4 +1,4 @@
-<openerp>
+<odoo>
     <data>
 	    
 		<record model="ir.actions.act_window" id="odoo_automated_testing_action">
@@ -71,4 +71,4 @@
         </record>
     
     </data>
-</openerp>
+</odoo>
