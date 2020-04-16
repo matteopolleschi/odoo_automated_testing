@@ -16,10 +16,11 @@
 
     'category': 'Hidden',
     'version': '1.0',
+    'sequence': 1,
 
     'depends': ['base', 'account'],
     'data': [
-        #'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/odoo_automated_testing_view.xml',
     ],
     'demo': [
