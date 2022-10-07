@@ -1,5 +1,5 @@
-id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-odoo_automated_testing_manager,odoo_automated_testing manager,model_odoo_automated_testing,base.user_admin,1,1,1,1
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+odoo_automated_testing_manager,odoo_automated_testing manager,model_odoo_automated_testing,base.group_system,1,1,1,1
 odoo_automated_testing_read_all,odoo_automated_testing all,model_odoo_automated_testing,base.group_public,1,0,0,0
-odoo_automated_testing_test_manager,odoo_automated_testing_test manager,model_odoo_automated_testing_test,base.user_admin,1,1,1,1
+odoo_automated_testing_test_manager,odoo_automated_testing_test manager,model_odoo_automated_testing_test,base.group_system,1,1,1,1
 odoo_automated_testing_test_read_all,odoo_automated_testing_test all,model_odoo_automated_testing_test,base.group_public,1,0,0,0

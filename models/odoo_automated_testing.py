@@ -2,7 +2,8 @@
 
 from odoo import models, fields, api
 
-class Odoo_automated_testing(models.Model):
+
+class OdooAutomatedTesting(models.Model):
     _name = 'odoo_automated.testing'
     _description = "Odoo automated testing"
 
@@ -18,9 +19,11 @@ class Odoo_automated_testing(models.Model):
         test_invoice_customer = self.env['res.partner'].create({'name': 'ExampleCustomer'})
         # Add a test product to the invoice
         category = self.env['product.category'].search([('name', '=', 'All')])
-        test_invoice_product = self.env['product.product'].create({'name': 'ExampleProduct','type': 'consu','categ_id': category.id,'lst_price': 50})
+        test_invoice_product = self.env['product.product'].create(
+            {'name': 'ExampleProduct', 'type': 'consu', 'categ_id': category.id, 'lst_price': 50})
         # Create a new invoice with the test
-        test_invoice = self.env['account.invoice'].create({'name': 'Testinvoice', 'partner_id': test_invoice_customer.id, 'product_id': test_invoice_product.id})
+        test_invoice = self.env['account.move'].create(
+            {'name': 'Testinvoice', 'partner_id': test_invoice_customer.id, 'product_id': test_invoice_product.id})
         # Check if the invoice name, the customer name and product name match
         tests = []
         if test_invoice_customer.name == 'ExampleCustomer':
@@ -38,10 +41,12 @@ class Odoo_automated_testing(models.Model):
             tests.append((0, 0, {'description': 'Test if the Total amount is 61', 'result': True}))
         # Check if the customer and product added in the invoice are in fact the correct ids
         if test_invoice_customer.id == test_invoice.partner_id:
-            tests.append((0, 0, {'description': 'Test if the Customer assinged to the invoice is the correct one', 'result': True}))
+            tests.append((0, 0, {'description': 'Test if the Customer assinged to the invoice is the correct one',
+                                 'result': True}))
         if test_invoice_product.id == test_invoice.product_id:
-            tests.append((0, 0, {'description': 'Test if the Product assigned to the invoice is the correct one', 'result': True}))
-        # Trasnsfer test result to the table test module field results
+            tests.append((0, 0, {'description': 'Test if the Product assigned to the invoice is the correct one',
+                                 'result': True}))
+        # Transfer test result to the table test module field results
         Module_invoicing.write({'test_ids': tests, 'result': 'The test was succesfull!'})
         # Delete all records created in invoice module for testing
         test_invoice_customer.unlink()
@@ -49,7 +54,7 @@ class Odoo_automated_testing(models.Model):
         test_invoice.unlink()
 
 
-class Odoo_automated_testing_test(models.Model):
+class OdooAutomatedTestingTest(models.Model):
     _name = 'odoo_automated.testing.test'
     _description = "Odoo automated test"
 
@@ -62,5 +67,5 @@ class Odoo_automated_testing_test(models.Model):
     def create(self, vals):
         if vals.get('name', 'New') == 'New':
             vals['name'] = self.env['ir.sequence'].next_by_code('odoo_automated.testing.test') or 'New'
-        test = super(Odoo_automated_testing_test, self).create(vals)
+        test = super(OdooAutomatedTestingTest, self).create(vals)
         return test

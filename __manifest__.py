@@ -11,7 +11,7 @@
             - create the related e-invoice file
     """,
 
-    'author': "Mounir lahsini",
+    'author': "Mounir lahsini, Bojan Anchev",
     'website': "https://github.com/matteopolleschi/odoo_automated_testing",
 
     'category': 'Hidden',
